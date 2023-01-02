@@ -48,6 +48,18 @@
                 <suite.xml.file>DivandMult.xml</suite.xml.file>
             </properties>
         </profile>
+        <profile>
+            <id>Exercise3.1</id>
+            <properties>
+                <suite.xml.file>hw3ex1.xml</suite.xml.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>Exercise3.2</id>
+            <properties>
+                <suite.xml.file>hw3ex2.xml</suite.xml.file>
+            </properties>
+        </profile>
     </profiles>
 
     <dependencies>
