@@ -10,8 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.asserts.SoftAssert;
-
 
 
 public class Exercise2 {
@@ -20,6 +18,7 @@ public class Exercise2 {
     @BeforeEach
     void setupTest() {
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     @AfterEach
@@ -29,7 +28,6 @@ public class Exercise2 {
 
     @Test
     public void test() {
-        SoftAssert softAssert = new SoftAssert();
 
         driver.get("https://jdi-testing.github.io/jdi-light/index.html"); //1. Open test site by URL
 

@@ -17,6 +17,7 @@ public class Exercise1 {
     @BeforeEach
     void setupTest() {
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     @AfterEach
