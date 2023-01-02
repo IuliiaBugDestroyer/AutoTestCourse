@@ -29,7 +29,7 @@ public class Exercise1 {
     public void test() {
         new Steps(this.driver)
                 .verifyBrowserTitle() //2. Assert Browser title
-                .login() //3. Perform login
+                .login("Roman", "Jdi1234") //3. Perform login
                 .verifyUsername("ROMAN IOVLEV") //4. Assert Username is loggined
                 .verify4Items() //5. Assert that there are 4 items on the header section are displayed
                 .verify4Pictures() //6. Assert that there are 4 images on the Index Page

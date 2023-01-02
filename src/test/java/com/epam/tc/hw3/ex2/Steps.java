@@ -20,9 +20,9 @@ public class Steps {
         this.differentElementsPage = new DifferentElementsPage(this.driver);
     }
 
-    public Steps login() {
+    public Steps login(String username, String password) {
         IndexPage indexPage = PageFactory.initElements(driver, IndexPage.class);
-        indexPage.login("Roman", "Jdi1234");
+        indexPage.login(username, password);
         return this;
     }
 

@@ -27,7 +27,7 @@ public class Exercise2 {
     @Test
     public void test() {
         new Steps(this.driver).verifyBrowserTitle() //2. Assert Browser title
-                .login() //3. Perform login
+                .login("Roman", "Jdi1234") //3. Perform login
                 .verifyUsername("ROMAN IOVLEV") //4. Assert Username in the left-top side of screen
                 .selectCheckboxes() //5. Open Different Elements Page, 6. Select checkboxes
                 .verifyChbxLogs() //9. Assert that for each checkbox there is an individual log row

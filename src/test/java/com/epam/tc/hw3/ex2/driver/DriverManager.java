@@ -9,6 +9,7 @@ public class DriverManager {
     public static WebDriver setupDriver() {
         if (driver == null) {
             driver = new ChromeDriver();
+            driver.manage().window().maximize();
             driver.manage().timeouts().getImplicitWaitTimeout();
         }
         return driver;
