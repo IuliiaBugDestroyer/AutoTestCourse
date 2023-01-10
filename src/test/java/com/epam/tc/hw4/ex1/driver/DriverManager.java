@@ -17,6 +17,8 @@ public class DriverManager {
             options.addArguments("--disable-extensions"); // disabling extensions
             options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
             options.addArguments("--no-sandbox"); // Bypass OS security model
+            options.setHeadless(true);
+            options.addArguments("--remote-debugging-port=9222");
 
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
