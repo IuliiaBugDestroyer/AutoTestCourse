@@ -22,9 +22,6 @@
     <profiles>
         <profile>  <!--нужен для запуска теста по команде по параметру-->
             <id>SumandSub</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <suite.xml.file>SumandSub.xml</suite.xml.file>
             </properties>
@@ -51,6 +48,15 @@
             <id>AllureFail</id>
             <properties>
                 <suite.xml.file>failed.xml</suite.xml.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>AllureAllCases</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml.file>AllEx4.xml</suite.xml.file>
             </properties>
         </profile>
         <profile>
