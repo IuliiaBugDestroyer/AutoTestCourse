@@ -2,11 +2,8 @@
 
 <suite name="AllSuite" verbose="1" >
     <test name="AllTests" >
-        <classes>
-            <class name="com.epam.tc.hw1.CalculatorAddition" />
-            <class name="com.epam.tc.hw1.CalculatorSubtraction" />
-            <class name="com.epam.tc.hw1.CalculatorDivide" />
-            <class name="com.epam.tc.hw1.CalculatorMultiply" />
-        </classes>
+        <packages>
+            <package name="com.epam.tc.hw1"></package>
+        </packages>
     </test>
 </suite>

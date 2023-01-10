@@ -7,7 +7,7 @@ import org.assertj.core.data.Offset;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class CalculatorAddition {
+public class CalculatorAdditionTest {
     @DataProvider
     public static Object [][] sumCorrectData() {
         return new Object[][] {
@@ -17,7 +17,6 @@ public class CalculatorAddition {
         };
     }
 
-    // {methodName}_when{TestCase}_then{ExpectedResult}
     @Test(dataProvider = "sumCorrectData")
     public void sum_whenPassingTwoDoubles_thenReturnsValidResult(double a, double b, double res) {
         Calculator calculator = new Calculator();
