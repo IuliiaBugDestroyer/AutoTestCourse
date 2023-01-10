@@ -3,6 +3,7 @@ package com.epam.tc.hw4.ex1.driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverManager {
     private static WebDriver driver;
@@ -11,7 +12,13 @@ public class DriverManager {
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
 
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("disable-infobars"); // disabling infobars
+            options.addArguments("--disable-extensions"); // disabling extensions
+            options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+            options.addArguments("--no-sandbox"); // Bypass OS security model
+
+            driver = new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().timeouts().getImplicitWaitTimeout();
         }
